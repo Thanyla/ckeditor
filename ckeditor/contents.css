@@ -1,0 +1,424 @@
+/*
+Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
+*/
+.clicked{
+	font-size: 56pt;
+}
+
+body
+{
+	/* Font */
+	/* Emoji fonts are added to visualise them nicely in Internet Explorer. */
+	font-family: Times, "Times New Roman", serif;
+	font-size: 12pt;
+
+	/* Text color */
+	color: #000000;
+
+	/* Remove the background color to make it transparent. */
+	background-color: #fff;
+	margin: 20px;
+}
+
+tr td p{margin: 0em;}
+span{margin:0em; padding: 0;}
+
+.cke_editable
+{
+	font-family: Times, "Times New Roman", serif;
+	font-size: 12pt;
+	line-height: normal;
+
+	/* Fix for missing scrollbars with RTL texts. (#10488) */
+	word-wrap: break-word;
+}
+
+blockquote
+{
+	font-style: italic;
+	font-family: Times, "Times New Roman", serif;
+	padding: 2px 0;
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 0;
+}
+
+.cke_contents_ltr blockquote
+{
+	padding-left: 20px;
+	padding-right: 8px;
+	border-left-width: 5px;
+}
+
+.cke_contents_rtl blockquote
+{
+	padding-left: 8px;
+	padding-right: 20px;
+	border-right-width: 5px;
+}
+
+a
+{
+	color: #0782C1;
+}
+
+ol,ul,dl
+{
+	/* IE7: reset rtl list margin. (#7334) */
+	*margin-right: 0px;
+	/* Preserved spaces for list items with text direction different than the list. (#6249,#8049)*/
+	/*padding: 0 40px;*/
+}
+
+h1,h2,h3,h4,h5,h6
+{
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+hr
+{
+	border: 0px;
+	border-top: 1px solid #ccc;
+}
+
+img.right
+{
+	border: 1px solid #ccc;
+	float: right;
+	margin-left: 15px;
+	padding: 5px;
+}
+
+img.left
+{
+	border: 1px solid #ccc;
+	float: left;
+	margin-right: 15px;
+	padding: 5px;
+}
+
+pre
+{
+	white-space: pre-wrap; /* CSS 2.1 */
+	word-wrap: break-word; /* IE7 */
+	-moz-tab-size: 4;
+	tab-size: 4;
+}
+
+.marker
+{
+	background-color: Yellow;
+}
+
+span[lang]
+{
+	font-style: italic;
+}
+
+figure
+{
+	text-align: center;
+	outline: solid 1px #ccc;
+	background: rgba(0,0,0,0.05);
+	padding: 10px;
+	margin: 10px 20px;
+	display: inline-block;
+}
+
+figure > figcaption
+{
+	text-align: center;
+	display: block; /* For IE8 */
+}
+
+a > img {
+	padding: 1px;
+	margin: 1px;
+	border: none;
+	outline: 1px solid #0782C1;
+}
+
+/* Widget Styles */
+.code-featured
+{
+	border: 5px solid red;
+}
+
+.math-featured
+{
+	padding: 20px;
+	box-shadow: 0 0 2px rgba(200, 0, 0, 1);
+	background-color: rgba(255, 0, 0, 0.05);
+	margin: 10px;
+}
+
+.image-clean
+{
+	border: 0;
+	background: none;
+	padding: 0;
+}
+
+.image-clean > figcaption
+{
+	font-size: .9em;
+	text-align: right;
+}
+
+.image-grayscale
+{
+	background-color: white;
+	color: #666;
+}
+
+.image-grayscale img, img.image-grayscale
+{
+	filter: grayscale(100%);
+}
+
+.embed-240p
+{
+	max-width: 426px;
+	max-height: 240px;
+	margin:0 auto;
+}
+
+.embed-360p
+{
+	max-width: 640px;
+	max-height: 360px;
+	margin:0 auto;
+}
+
+.embed-480p
+{
+	max-width: 854px;
+	max-height: 480px;
+	margin:0 auto;
+}
+
+.embed-720p
+{
+	max-width: 1280px;
+	max-height: 720px;
+	margin:0 auto;
+}
+
+.embed-1080p
+{
+	max-width: 1920px;
+	max-height: 1080px;
+	margin:0 auto;
+}
+
+.cke_combo__styles .cke_combo_text {width:230px !important;}
+.cke_button__save_label {display:inline !important;}
+.cke_button__autotexto_label {display:inline !important;}
+.cke_button__assinatura_label {display:inline !important;}
+.cke_combopanel__styles {width:500px !important;}
+div.infraAreaDebug{
+	overflow:auto;
+	display:table;
+	white-space:pre-wrap;
+	font-size: 1em;
+	width:100%;
+}
+div.infraAviso {
+	position:absolute;
+	padding:.4em;
+	border:.1em solid black;
+	background-color:#dfdfdf;
+	z-index:999;
+}
+
+div.infraAviso span{
+	/* font-family:Verdana, Arial, Helvetica, sans-serif;  */
+	font-weight:bold;
+	font-size:1.2em;
+}
+
+div.infraFundoTransparente{
+	z-index:997;
+	visibility:hidden;
+	position:absolute;
+	overflow:hidden;
+	width:1px;
+	height:1px;
+	left:0;
+	top:0;
+	background:transparent url("/infra_css/imagens/fndtransp.gif");
+	background-repeat:repeat;
+}
+div.editorSomenteLeitura{background:#e5e5e5;border-color:#696969;border-style: dotted solid;border-width:1px;}
+#myDiv  {white-space:pre-wrap}
+
+p.Item_Nivel1 {
+	text-transform:uppercase;
+	font-weight:bold;
+	background-color:#e6e6e6;
+	font-size:12pt;
+	font-family:Calibri;
+	text-align:justify;
+	word-wrap:normal;
+	text-indent:0;
+	margin:6pt;
+	counter-increment:item-n1;
+	counter-reset:item-n2 item-n3 item-n4 romano_maiusculo letra_minuscula;
+} 
+p.Item_Nivel1:before {
+	content:counter(item-n1) ".";
+	display:inline-block;
+	width:25mm;
+	font-weight:normal;
+} 
+p.Item_Nivel2 {
+	font-size:12pt;
+	font-family:Calibri;
+	text-indent:0mm;
+	text-align:justify;
+	word-wrap:normal;
+	margin:6pt;
+	counter-increment:item-n2;
+	counter-reset:item-n3 item-n4 romano_maiusculo letra_minuscula;
+} 
+p.Item_Nivel2:before {
+	content:counter(item-n1) "." counter(item-n2) ".";
+	display:inline-block;
+	width:25mm;
+	font-weight:normal;
+} 
+p.Tabela_Texto_8 {
+	font-size:8pt;
+	font-family:Times, "Times New Roman", serif;
+	text-align:left;
+	word-wrap:normal;
+	margin:0 3pt 0 3pt;
+} 
+p.Tabela_Texto_Alinhado_Direita {
+	font-size:11pt;
+	font-family:Times, "Times New Roman", serif;
+	text-align:right;
+	word-wrap:normal;
+	margin:0 3pt 0 3pt;
+} 
+p.Tabela_Texto_Alinhado_Esquerda {
+	font-size:11pt;
+	font-family:Times, "Times New Roman", serif;
+	text-align:left;
+	word-wrap:normal;
+	margin:0 3pt 0 3pt;
+} 
+p.Tabela_Texto_Centralizado {
+	font-size:11pt;
+	font-family:Times, "Times New Roman", serif;
+	text-align:center;
+	word-wrap:normal;
+	margin:0 3pt 0;
+} 
+p.Tachado {
+	font-size:11pt;
+	font-family:Times, "Times New Roman", serif;
+	text-indent:1.18in;
+	text-align:justify;
+	word-wrap:normal;
+	text-decoration:line-through;
+} 
+p.Texto_Alinhado_Direita {
+	font-size:12pt;
+	font-family:Times, "Times New Roman", serif;
+	text-align:right;
+	word-wrap:normal;
+	margin:6pt;
+} 
+p.Texto_Alinhado_Esquerda {
+	font-size:12pt;
+	font-family:Times, "Times New Roman", serif;
+	text-align:left;
+	word-wrap:normal;
+	margin:6pt;
+} 
+p.Texto_Alinhado_Esquerda_Espaçamento_Simples {
+	font-size:12pt;
+	font-family:Times, "Times New Roman", serif;
+	text-align:left;
+	word-wrap:normal;
+	margin:0;
+} 
+p.Texto_Centralizado {
+	font-size:12pt;
+	font-family:Times, "Times New Roman", serif;
+	text-align:center;
+	word-wrap:normal;
+	margin:6pt;
+} 
+p.Texto_Centralizado_Maiusculas {
+	font-weight:bold;
+	font-size:13pt;
+	font-family:Times, "Times New Roman", serif;
+	text-align:center;
+	text-transform:uppercase;
+	word-wrap:normal;
+} 
+p.Texto_Citação {
+	font-size:10pt;
+	font-family:Times, "Times New Roman", serif;
+	word-wrap:normal;
+	margin:4pt 0 4pt 1.18in;
+	text-align:justify;
+} 
+p.Texto_Ementa {
+	font-size:10pt;
+	font-family:Times, "Times New Roman", serif;
+	text-align:justify;
+	word-wrap:normal;
+	margin:4pt 0 4pt 3.14in;
+} 
+p.Texto_Justificado {
+	font-size:12pt;
+	font-family:Times, "Times New Roman", serif;
+	text-align:justify;
+	word-wrap:normal;
+	text-indent:0;
+	margin:6pt;
+} 
+p.Texto_Justificado_Recuo_Primeira_Linha {
+	font-size:12pt;
+	font-family:Times, "Times New Roman", serif;
+	text-indent:1.18in;
+	text-align:justify;
+	word-wrap:normal;
+	margin:6pt;
+} 
+p.Texto_Mono_Espaçado {
+	font-size:8pt;
+	font-family:Courier New;
+	text-align:left;
+	white-space:pre;
+	word-wrap:normal;
+	margin:2pt;
+} 
+p.texto_times_12 {
+	font-size:8pt;
+	font-family:Times, "Times New Roman", serif;
+	text-align:left;
+	word-wrap:normal;
+	margin:0 3pt 0 3pt;
+} 
+
+#frame-spec{
+	display:block; 
+	width:100%; 
+	border:none;
+}
+.cke_combo_text {
+    line-height: 26px;
+    padding-left: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    float: left;
+    cursor: default;
+    color: #484848;
+    width: 250px;
+}

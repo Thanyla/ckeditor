@@ -1,0 +1,14 @@
+body
+{
+	/* Font */
+	/* Emoji fonts are added to visualise them nicely in Internet Explorer. */
+	font-family: Times, "Times New Roman", serif;
+	font-size: 12pt;
+
+	/* Text color */
+	color: #000000;
+
+	/* Remove the background color to make it transparent. */
+	background-color: rgb(255, 255, 255);
+	margin: 20px;
+}

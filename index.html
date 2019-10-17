@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>A Simple Page with CKEditor</title>
+        <!-- Make sure the path to CKEditor is correct. -->
+        <script src="ck/ckeditor.js"></script>
+        <script src="ck/contents.css"></script>
+    </head>
+    <body>
+        <form action="adicionar.php" method="POST"> 
+            <textarea name="editor1" id="editor1" rows="10" cols="80"> 
+                    <div class="non_editable_class"><img src="download.png"></div>
+            </textarea>
+            <input  type = "submit"  />
+            <script>
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
+                CKEDITOR.replace( 'editor1');
+                var editor_data = CKEDITOR.instances.editor1.getData ();
+                console.log(editor_data);
+            </script>
+        </form>
+    
+    </body>
+</html>
